@@ -6,7 +6,8 @@ function findNumsThatSumTo2020(listOfNums) {
     comparingNum = listOfNums[i]
     for (i2 = 0; i2 < listOfNums.length; i2++) {
       comparedToNum = listOfNums[i2]
-      if (i != i2 && comparingNum + comparedToNum == 2020) {
+      sameIndex = i == i2
+      if (!sameIndex && comparingNum + comparedToNum == 2020) {
         numsThatSumTo2020 = [comparingNum, comparedToNum]
       }
     }
@@ -16,7 +17,11 @@ function findNumsThatSumTo2020(listOfNums) {
     return numsThatSumTo2020;
   }
 
-  function multiple(two2020Nums) {
-    return null;
+  function findNumsThatSumTo2020AndMultiply(listOfNums) {
+    numsThatSumTo2020 = findNumsThatSumTo2020(listOfNums)
+    return numsThatSumTo2020[0] * numsThatSumTo2020[1]
   }
-  module.exports = findNumsThatSumTo2020;
+
+
+  module.exports = { findNumsThatSumTo2020: findNumsThatSumTo2020, 
+    findNumsThatSumTo2020AndMultiply: findNumsThatSumTo2020AndMultiply }
