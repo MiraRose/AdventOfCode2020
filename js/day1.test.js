@@ -5,3 +5,8 @@ test('given list finds two nums that sum to 2020', () => {
     expect(result).toContain(299);
     expect(result).toContain(1721);
 });
+
+test('given list does not sum same num with itself', () => {
+    result2 = findNumsThatSumTo2020([1010, 1721]);
+    expect(result2).toBeNull();
+});
