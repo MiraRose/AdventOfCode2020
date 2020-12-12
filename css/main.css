@@ -3,17 +3,22 @@ body {
   }
 
   p {
-      color: lightgray
+      color: lightgray;
+      margin: auto;
+      text-align: center;
   }
 
   a {
       color: lightgray;
+      text-align: center;
+
   }
 
   div.treeDay {
       background-color: #004515;
       width: 50px;
       margin: auto;
+      padding: 5px;
   }
 
   div.title {
@@ -23,4 +28,38 @@ body {
       text-align: center;
       font-size: 2em;
       font-family: 'Noto Serif', serif;
+  }
+
+  div.form {
+      margin: auto;
+  }
+
+  div.result {
+      margin: 20px auto 20px auto;
+      background-color: #004515;
+      width: 400px;
+
+  }
+
+  form {
+      text-align: center;
+  }
+
+  h2 {
+      color: lightgray;
+      margin: auto auto 20px auto;
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+  }
+
+  h3 {
+    color: lightgray;
+    margin: 10px auto 10px auto;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+}
+
+  textarea {
+      width: 500px;
+      height: 400px;
   }
