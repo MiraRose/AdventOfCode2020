@@ -12,6 +12,14 @@ function findNumsThatSumTo2020(listOfNums, numOfNumsToSum) {
         if (!sameIndex && comparingNum + comparedToNum == 2020) {
           numsThatSumTo2020 = [comparingNum, comparedToNum]
         }
+      } else if (numOfNumsToSum == 3) {
+        for (i3 = 0; i3 < listOfNums.length; i3++) {
+          comparedToNum2 = listOfNums[i3]
+          var sameIndex = i == i2 == i3
+          if (!sameIndex && comparingNum + comparedToNum + comparedToNum2 == 2020) {
+            numsThatSumTo2020 = [comparingNum, comparedToNum, comparedToNum2]
+          }
+        }
       }
       
     }
