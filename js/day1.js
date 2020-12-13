@@ -31,8 +31,13 @@ function findNumsThatSumTo2020(listOfNums, numOfNumsToSum) {
 
   function findNumsThatSumTo2020AndMultiply(listOfNums, numOfNumsToSum) {
     var numsThatSumTo2020 = findNumsThatSumTo2020(listOfNums, numOfNumsToSum)
-    console.log(numsThatSumTo2020)
-    return numsThatSumTo2020[0] * numsThatSumTo2020[1]
+    var multiple
+    if (numOfNumsToSum == 3) {
+      multiple = numsThatSumTo2020[0] * numsThatSumTo2020[1] * numsThatSumTo2020[2]
+    } else {
+      multiple = numsThatSumTo2020[0] * numsThatSumTo2020[1]
+    }
+    return multiple
   }
 
   function formSubmit() {
