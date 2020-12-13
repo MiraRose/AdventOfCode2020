@@ -40,7 +40,10 @@ function findNumsThatSumTo2020(listOfNums, numOfNumsToSum) {
     listOfNumsArray = listOfNums.split('\n').map(function(item) {
       return parseInt(item, 10);
   });
-    var multiple = findNumsThatSumTo2020AndMultiply(listOfNumsArray);
+
+    var numOfNumsToSum = document.querySelector('input[name="numOfNumsToSum"]:checked').value;
+    console.log(numOfNumsToSum)
+    var multiple = findNumsThatSumTo2020AndMultiply(listOfNumsArray, numOfNumsToSum);
     document.getElementById('result').innerText = multiple;
 }
 

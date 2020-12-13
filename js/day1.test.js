@@ -22,3 +22,8 @@ test('given list returns multiple of num that sum to 2020', () => {
     result = day1.findNumsThatSumTo2020AndMultiply([1721, 979, 366, 299, 675, 1456], 2)
     expect(result).toBe(514579);
 })
+
+test('given list returns multiple of 3 nums that sum to 2020', () => {
+    result = day1.findNumsThatSumTo2020AndMultiply([1721, 979, 366, 299, 675, 1456], 3)
+    expect(result).toBe(241861950);
+})
