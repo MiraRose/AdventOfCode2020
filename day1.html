@@ -16,6 +16,7 @@
 <body>
     <script src="js/day1.js"></script>
     <div class="title">Advent of Code - 2020</div>
+    <div id="backButton"><a href="index.html"><<< Back</a></div>
     <h2>Find the 2 or 3 Numbers in a List that Add up to 2020 and Return the Multiple of Those Numbers</h1>
     <div class="form">
         <form>
@@ -24,14 +25,18 @@
             <div>
                 <div><h3>Select Number of Numbers to Sum</h3></div>
                 <fieldset id="numOfNumsToSum">
-                <p>2</p><input type="radio" value="2" name="numOfNumsToSum" label="2">
-                <p>3</p><input type="radio" value="3" name="numOfNumsToSum" label="3">
+                <label for="numOfNumsToSum">2</label>
+                <input type="radio" value="2" name="numOfNumsToSum" label="2">
+                <label for="numOfNumsToSum">3</label>
+                <input type="radio" value="3" name="numOfNumsToSum" label="3">
               </fieldset>
             </div>
             <div><button type="button" onclick="formSubmit()">Calculate</button></div>
         </form>
     </div>
-    <div><h3>Result</h3></div>
-    <div class="result"><p id="result"></p></div>
+    <div class="result">
+        <h3>Result</h3>
+    <p id="result"></p>
+</div>
 </body>
 </html>

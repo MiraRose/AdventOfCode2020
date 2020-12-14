@@ -8,6 +8,12 @@ body {
       text-align: center;
   }
 
+label {
+    color: lightgray;
+    margin: auto;
+    text-align: center;
+}
+
   a {
       color: lightgray;
       text-align: center;
@@ -62,4 +68,14 @@ body {
   textarea {
       width: 500px;
       height: 400px;
+  }
+
+  fieldset {
+      width: 400px;
+      margin: auto auto 10px auto;
+  }
+
+  div.backButton {
+      margin: auto;
+      width: 600px;
   }
