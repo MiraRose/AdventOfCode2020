@@ -55,6 +55,13 @@ function findHowManyPasswordsAreValid(stringOfPuzzleLines) {
 
 }
 
+function formSubmit() {
+    var input = document.getElementById('listOfNums2020').value;
+
+    var numOfValidPasswords = findHowManyPasswordsAreValid(input);
+    document.getElementById('result').innerText = numOfValidPasswords;
+}
+
 module.exports = { isValidPassword: isValidPassword, 
     removeInvalidPasswords: removeInvalidPasswords, 
     createPuzzleObject: createPuzzleObject,
