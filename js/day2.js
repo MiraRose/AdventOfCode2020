@@ -27,12 +27,7 @@ function createPuzzleObject(passwordString) {
 }
 
 function getListOfPuzzleObjects(stringOfPuzzleLines) {
-
-    var arrayOfPuzzleLines = stringOfPuzzleLines.split("\n")
-
-    var arrayOfPuzzleObjects = arrayOfPuzzleLines.map(createPuzzleObject)
-    
-    return arrayOfPuzzleObjects
+    return stringOfPuzzleLines.split("\n").map(createPuzzleObject)
 }
 
 function removeInvalidPasswords(listOfPasswordObjects) {
