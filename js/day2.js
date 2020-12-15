@@ -8,11 +8,7 @@ function getListOfPuzzleObjects(arrayOfPuzzleLines) {
 }
 
 function removeInvalidPasswords(listOfPasswordObjects) {
-
-    listOfPasswordObjects = listOfPasswordObjects.filter(isValidPassword)
-
-    return listOfPasswordObjects
-
+    return listOfPasswordObjects.filter(isValidPassword)
 }
 
 function isValidPassword (passwordObject) {

@@ -6,7 +6,7 @@ test('given valid password object returns true', () => {
         password: "abcde",
         keyLetter: "a",
         minTimes: 1,
-        maxTimes: 2
+        maxTimes: 3
     }
 
     result = day2.isValidPassword(validObject);
@@ -35,7 +35,7 @@ test('given list of invalid passwords, removes false', () => {
             password: "abcde",
             keyLetter: "a",
             minTimes: 1,
-            maxTimes: 2 },
+            maxTimes: 3 },
         {
             password: "cdefg",
             keyLetter: "b",
