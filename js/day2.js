@@ -7,7 +7,11 @@ function getListOfPuzzleObjects(arrayOfPuzzleLines) {
 
 }
 
-function findValidPasswords(listOfPasswordObjects) {
+function removeInvalidPasswords(listOfPasswordObjects) {
+
+    listOfPasswordObjects = listOfPasswordObjects.filter(isValidPassword)
+
+    return listOfPasswordObjects
 
 }
 
@@ -29,4 +33,4 @@ function findHowManyPasswordsAreValid(listOfValidPasswordObjects) {
     
 }
 
-module.exports = { isValidPassword: isValidPassword }
+module.exports = { isValidPassword: isValidPassword, removeInvalidPasswords: removeInvalidPasswords }

@@ -28,3 +28,25 @@ test('given invalid password object returns false', () => {
    
 });
 
+test('given list of invalid passwords, removes false', () => {
+
+    var listofPasswordObjects = [
+        {
+            password: "abcde",
+            keyLetter: "a",
+            minTimes: 1,
+            maxTimes: 2 },
+        {
+            password: "cdefg",
+            keyLetter: "b",
+            minTimes: 1,
+            maxTimes: 3
+        }
+    ]
+
+    result = day2.removeInvalidPasswords(listofPasswordObjects);
+    expect(result.length).toBe(1);
+    expect(result[0].password).toBe("abcde")
+   
+});
+
