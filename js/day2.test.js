@@ -50,3 +50,15 @@ test('given list of invalid passwords, removes false', () => {
    
 });
 
+test('given string creates correct puzzle object', () => {
+
+    var passwordString = "1-3 a: abcde"
+
+    result = day2.createPuzzleObject(passwordString);
+    expect(result.password).toBe("abcde");
+    expect(result.keyLetter).toBe("a");
+    expect(result.minTimes).toBe(1);
+    expect(result.maxTimes).toBe(3);
+   
+});
+
