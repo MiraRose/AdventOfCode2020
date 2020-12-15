@@ -62,3 +62,14 @@ test('given string creates correct puzzle object', () => {
    
 });
 
+test('given string of passwords seperated by lines creates list of puzzle objects', () => {
+
+    var passwordString = "1-3 a: abcde\n1-3 a: abcde"
+
+    result = day2.getListOfPuzzleObjects(passwordString);
+    expect(result.length).toBe(2);
+    expect(result[0].password).toBe("abcde");
+    expect(result[1].password).toBe("abcde");
+   
+});
+

@@ -26,8 +26,13 @@ function createPuzzleObject(passwordString) {
     return passwordObject
 }
 
-function getListOfPuzzleObjects(arrayOfPuzzleLines) {
+function getListOfPuzzleObjects(stringOfPuzzleLines) {
 
+    var arrayOfPuzzleLines = stringOfPuzzleLines.split("\n")
+
+    var arrayOfPuzzleObjects = arrayOfPuzzleLines.map(createPuzzleObject)
+    
+    return arrayOfPuzzleObjects
 }
 
 function removeInvalidPasswords(listOfPasswordObjects) {
@@ -54,4 +59,5 @@ function findHowManyPasswordsAreValid(listOfValidPasswordObjects) {
 
 module.exports = { isValidPassword: isValidPassword, 
     removeInvalidPasswords: removeInvalidPasswords, 
-    createPuzzleObject: createPuzzleObject }
+    createPuzzleObject: createPuzzleObject,
+    getListOfPuzzleObjects: getListOfPuzzleObjects }
