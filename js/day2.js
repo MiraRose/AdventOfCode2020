@@ -1,6 +1,8 @@
 
 function createPuzzleObject(passwordString) {
 
+    // example of string received: 1-3 a: abcde
+
     var passwordObject = {
         password: null,
         keyLetter: null,
@@ -8,18 +10,18 @@ function createPuzzleObject(passwordString) {
         maxTimes: null
     }
 
-    var passwordArray = passwordString.split(":")
+    var passwordSplitArray = passwordString.split(":")
 
-    passwordObject.password = passwordArray[1].trim()
+    passwordObject.password = passwordSplitArray[1].trim()
     
-    var passwordArray2 = passwordArray[0].split(" ")
+    var passwordSplitFrontHalfArray = passwordSplitArray[0].split(" ")
 
-    passwordObject.keyLetter = passwordArray2[1]
+    passwordObject.keyLetter = passwordSplitFrontHalfArray[1]
 
-    var passwordArray3 = passwordArray2[0].split("-")
+    var passwordMinMaxNums = passwordSplitFrontHalfArray[0].split("-")
 
-    passwordObject.minTimes = parseInt(passwordArray3[0])
-    passwordObject.maxTimes = parseInt(passwordArray3[1])
+    passwordObject.minTimes = parseInt(passwordMinMaxNums[0])
+    passwordObject.maxTimes = parseInt(passwordMinMaxNums[1])
 
     return passwordObject
 }
