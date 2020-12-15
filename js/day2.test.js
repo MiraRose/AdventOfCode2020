@@ -14,3 +14,17 @@ test('given valid password object returns true', () => {
    
 });
 
+test('given invalid password object returns false', () => {
+
+    var invalidObject = {
+        password: "cdefg",
+        keyLetter: "b",
+        minTimes: 1,
+        maxTimes: 3
+    }
+
+    result = day2.isValidPassword(invalidObject);
+    expect(result).toBeFalsy();
+   
+});
+
