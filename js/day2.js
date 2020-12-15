@@ -47,12 +47,16 @@ function isValidPassword (passwordObject) {
     return isValidPassword
 }
 
-function findHowManyPasswordsAreValid(listOfValidPasswordObjects) {
+function findHowManyPasswordsAreValid(stringOfPuzzleLines) {
 
-    
+    var listOfPuzzleObjects = getListOfPuzzleObjects(stringOfPuzzleLines)
+    var listOfValidPasswords = removeInvalidPasswords(listOfPuzzleObjects)
+    return listOfValidPasswords.length
+
 }
 
 module.exports = { isValidPassword: isValidPassword, 
     removeInvalidPasswords: removeInvalidPasswords, 
     createPuzzleObject: createPuzzleObject,
-    getListOfPuzzleObjects: getListOfPuzzleObjects }
+    getListOfPuzzleObjects: getListOfPuzzleObjects,
+    findHowManyPasswordsAreValid: findHowManyPasswordsAreValid }

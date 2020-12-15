@@ -73,3 +73,12 @@ test('given string of passwords seperated by lines creates list of puzzle object
    
 });
 
+test('given string of passwords seperated by lines returns correct num of valid passwords', () => {
+
+    var passwordString = "1-3 a: abcde\n1-3 b: cdefg\n2-9 c: ccccccccc"
+
+    result = day2.findHowManyPasswordsAreValid(passwordString);
+    expect(result).toBe(2);
+   
+});
+
