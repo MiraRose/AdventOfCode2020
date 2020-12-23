@@ -20,15 +20,6 @@ function createArrayOfPassportObjects(passportBlob) {
 
 function isValidPassport(passportObj) {
 
-//     byr (Birth Year)
-// iyr (Issue Year)
-// eyr (Expiration Year)
-// hgt (Height)
-// hcl (Hair Color)
-// ecl (Eye Color)
-// pid (Passport ID)
-// cid (Country ID)
-
     var isValid = passportObj.hasOwnProperty("byr") &&
     passportObj.hasOwnProperty("iyr") &&
     passportObj.hasOwnProperty("eyr") &&
@@ -36,7 +27,7 @@ function isValidPassport(passportObj) {
     passportObj.hasOwnProperty("hgt") &&
     passportObj.hasOwnProperty("ecl") &&
     passportObj.hasOwnProperty("pid") &&
-    passportObj.hasOwnProperty("cid")
+    (passportObj.hasOwnProperty("cid") || !passportObj.hasOwnProperty("cid"))
 
     return isValid
 }
