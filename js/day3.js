@@ -9,8 +9,6 @@ function getNumOfTreesWouldHit(blobOfLines) {
 
     for (line of arrayOfLines) {
          
-        console.log(line)
-        console.log(line.length)
         // if space (index) is a number greater than the line length
         // reset to beginning of line accounting for difference
         // to mimic the pattern repeating
@@ -19,14 +17,11 @@ function getNumOfTreesWouldHit(blobOfLines) {
             spaceOnLine = spaceOnLine - line.length
         }
        
-        console.log(spaceOnLine)
         var lineArray = line.split('');
                
         if (lineArray[spaceOnLine] == '#') {
             treesHit++
         }
-
-        console.log(treesHit)
         
         spaceOnLine = spaceOnLine + 3
         
