@@ -1,8 +1,7 @@
 
 function createPassportObject(lineString) {
 
-    lineString = lineString.replace(/\n/g, " ")
-    var lineArray = lineString.split(' ')
+    var lineArray = lineString.replace(/\n/g, " ").split(' ')
 
     var passportObj = {}
 
@@ -16,11 +15,7 @@ function createPassportObject(lineString) {
 
 function createArrayOfPassportObjects(passportBlob) {
 
-    var passportArray = passportBlob.split("\n\n")
-
-    passportArray = passportArray.map(createPassportObject)
-
-    return passportArray
+    return passportBlob.split("\n\n").map(createPassportObject)
 }
 
 function isInvalidPassport() {
