@@ -1,43 +1,48 @@
 
 
-function makeArrayOfSlopeLines() {
-
-}
 
 function getNumOfTreesWouldHit(blobOfLines) {
 
     var arrayOfLines = blobOfLines.split("\n")
-    var space = 0;
+    var spaceOnLine = 0;
     var treesHit = 0;
 
     for (line of arrayOfLines) {
          
+        console.log(line)
+        console.log(line.length)
         // if space (index) is a number greater than the line length
         // reset to beginning of line accounting for difference
         // to mimic the pattern repeating
-        if (space > line.length) {
-            space = space - line.length
+        if (spaceOnLine >= line.length) {
+
+            spaceOnLine = spaceOnLine - line.length
         }
        
+        console.log(spaceOnLine)
         var lineArray = line.split('');
                
-        if (lineArray[space] == '#') {
+        if (lineArray[spaceOnLine] == '#') {
             treesHit++
         }
+
+        console.log(treesHit)
         
-        space = space + 3
+        spaceOnLine = spaceOnLine + 3
         
     }
 
     return treesHit
 }
 
-function goDownSlope() {
+function formSubmit() {
+    var input = document.getElementById('listOfNums2020').value;
 
+    var numOfTreesHit =  getNumOfTreesWouldHit(input);
+    document.getElementById('result').innerText = numOfTreesHit;
 }
 
+
 module.exports = {  
-    makeArrayOfSlopeLines: makeArrayOfSlopeLines,
     getNumOfTreesWouldHit: getNumOfTreesWouldHit,
-    goDownSlope: goDownSlope
  }
