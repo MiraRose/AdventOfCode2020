@@ -14,8 +14,13 @@ function createPassportObject(lineString) {
     return passportObj
 }
 
-function createArrayOfPassportObjects() {
+function createArrayOfPassportObjects(passportBlob) {
 
+    var passportArray = passportBlob.split("\n\n")
+
+    passportArray = passportArray.map(createPassportObject)
+
+    return passportArray
 }
 
 function isInvalidPassport() {
@@ -24,4 +29,5 @@ function isInvalidPassport() {
 
 module.exports = {  
     createPassportObject: createPassportObject,
+    createArrayOfPassportObjects: createArrayOfPassportObjects
  }
