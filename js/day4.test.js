@@ -62,3 +62,16 @@ test('given passport with all fields but cid, returns true', () => {
     expect(isValid).toBeTruthy()
     
 });
+
+test('given passport without all fields, returns false', () => {
+
+    var string = "iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884\n" +
+    "hcl:#cfa07d byr:1929"
+    
+    passportObj = day4.createPassportObject(string);
+    
+    var isValid = day4.isValidPassport(passportObj);
+
+    expect(isValid).toBeFalsy()
+    
+});
