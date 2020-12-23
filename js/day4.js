@@ -32,8 +32,18 @@ function isValidPassport(passportObj) {
     return isValid
 }
 
+function findNumberOfValidPassports(passportBlob) {
+
+    var passportArray = createArrayOfPassportObjects(passportBlob);
+
+    passportArray = passportArray.filter(isValidPassport)
+
+    return passportArray.length
+}
+
 module.exports = {  
     createPassportObject: createPassportObject,
     createArrayOfPassportObjects: createArrayOfPassportObjects,
-    isValidPassport : isValidPassport
+    isValidPassport : isValidPassport,
+    findNumberOfValidPassports : findNumberOfValidPassports
  }
