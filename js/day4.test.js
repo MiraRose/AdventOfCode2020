@@ -35,3 +35,15 @@ test('create array of passports from passport blob', () => {
     expect(result[2].eyr).toBe("2024")
     
 });
+
+test('given passport with all fields, returns true', () => {
+
+    var string = "ecl:gry pid:860033327 eyr:2020 hcl:#fffffd\nbyr:1937 iyr:2017 cid:147 hgt:183cm"
+    
+    passportObj = day4.createPassportObject(string);
+    
+    var isValid = day4.isValidPassport(passportObj);
+
+    expect(isValid).toBeTruthy()
+    
+});

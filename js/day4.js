@@ -18,11 +18,31 @@ function createArrayOfPassportObjects(passportBlob) {
     return passportBlob.split("\n\n").map(createPassportObject)
 }
 
-function isInvalidPassport() {
+function isValidPassport(passportObj) {
 
+//     byr (Birth Year)
+// iyr (Issue Year)
+// eyr (Expiration Year)
+// hgt (Height)
+// hcl (Hair Color)
+// ecl (Eye Color)
+// pid (Passport ID)
+// cid (Country ID)
+
+    var isValid = passportObj.hasOwnProperty("byr") &&
+    passportObj.hasOwnProperty("iyr") &&
+    passportObj.hasOwnProperty("eyr") &&
+    passportObj.hasOwnProperty("iyr") &&
+    passportObj.hasOwnProperty("hgt") &&
+    passportObj.hasOwnProperty("ecl") &&
+    passportObj.hasOwnProperty("pid") &&
+    passportObj.hasOwnProperty("cid")
+
+    return isValid
 }
 
 module.exports = {  
     createPassportObject: createPassportObject,
-    createArrayOfPassportObjects: createArrayOfPassportObjects
+    createArrayOfPassportObjects: createArrayOfPassportObjects,
+    isValidPassport : isValidPassport
  }
