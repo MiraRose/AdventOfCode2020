@@ -23,7 +23,7 @@ function isValidPassport(passportObj) {
     var isValid = passportObj.hasOwnProperty("byr") &&
     passportObj.hasOwnProperty("iyr") &&
     passportObj.hasOwnProperty("eyr") &&
-    passportObj.hasOwnProperty("iyr") &&
+    passportObj.hasOwnProperty("hcl") &&
     passportObj.hasOwnProperty("hgt") &&
     passportObj.hasOwnProperty("ecl") &&
     passportObj.hasOwnProperty("pid") &&
@@ -36,7 +36,16 @@ function findNumberOfValidPassports(passportBlob) {
 
     var passportArray = createArrayOfPassportObjects(passportBlob).filter(isValidPassport)
 
+    console.log(passportArray)
+
     return passportArray.length
+}
+
+function formSubmit() {
+    var input = document.getElementById('listOfNums2020').value;
+
+    var numOfValidPassports = findNumberOfValidPassports(input);
+    document.getElementById('result').innerText = numOfValidPassports;
 }
 
 module.exports = {  
