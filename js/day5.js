@@ -28,22 +28,24 @@ function findPosition(charArray, lengthOfRowColumn, upperHalfIndiator) {
 
 function findColumn(lastThreeCharacters) {
 
+    return findPosition(lastThreeCharacters, 8, "R")
     
 }
 
 function findSeatNum(row, column) {
 
+    return (row * 8) + column
 }
 
-function findHighestSeatNumber(listO) {
+function findHighestSeatNumber(listOfNums2020) {
 
 }
 
 function formSubmit() {
     var input = document.getElementById('listOfNums2020').value;
 
-    var numOfValidPassports = findNumberOfValidPassports(input);
-    document.getElementById('result').innerText = numOfValidPassports;
+    var highestSeatNum = findHighestSeatNumber(input);
+    document.getElementById('result').innerText = highestSeatNum;
 }
 
 module.exports = {  
