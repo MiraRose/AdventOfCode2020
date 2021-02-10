@@ -1,16 +1,21 @@
 
 function findRow(firstSevenCharArray) {
 
-    var rowArray = Array.from({length: 128}, (x, i) => i);
+    return findPosition(firstSevenCharArray, 128, "B")
+}
 
-    for (var char of firstSevenCharArray) {
+function findPosition(charArray, lengthOfRowColumn, upperHalfIndiator) {
+
+    var rowArray = Array.from({length: lengthOfRowColumn}, (x, i) => i);
+
+    for (var char of charArray) {
 
         const half = Math.ceil(rowArray.length / 2);    
 
         const lowerHalf = rowArray.splice(0, half)
         const upperHalf = rowArray.splice(-half)
  
-        if (char == "B") {
+        if (char == upperHalfIndiator) {
             rowArray = upperHalf
 
         } else {
@@ -23,6 +28,7 @@ function findRow(firstSevenCharArray) {
 
 function findColumn(lastThreeCharacters) {
 
+    
 }
 
 function findSeatNum(row, column) {

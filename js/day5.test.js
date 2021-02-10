@@ -11,3 +11,14 @@ test('get row number', () => {
     
 });
 
+test('get column number', () => {
+
+    var string = "RRR"
+    var stringArray = string.split("")
+    
+    result = day5.findColumn(stringArray)
+    expect(result).toBe(7)
+
+    
+});
+
