@@ -41,12 +41,10 @@ function findHighestSeatNumber(input) {
 
     input = input.split("\n")
     var seatNumArray = []
-    for (line of input) {
-        var row = line.slice(0, 6)
-        var column = line.slice(7, 9)
 
-        var rowArray = row.split("")
-        var columnArray = column.split("")
+    for (line of input) {
+        var rowArray = line.slice(0, 7).split("")
+        var columnArray = line.slice(7, 10).split("")
 
         var rowNum = findRow(rowArray)
         var columnNum = findColumn(columnArray)
