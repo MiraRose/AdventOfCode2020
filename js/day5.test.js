@@ -39,3 +39,13 @@ test('get seat number', () => {
     
 });
 
+test('find highest seat number', () => {
+
+    var input = "BFFFBBFRRR\nFFFBBBFRRR\nBBFFBBFRLL"
+    
+    result = day5.findHighestSeatNumber(input)
+    expect(result).toBe(820)
+
+    
+});
+

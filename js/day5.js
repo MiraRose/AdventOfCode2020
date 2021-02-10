@@ -37,7 +37,26 @@ function findSeatNum(row, column) {
     return (row * 8) + column
 }
 
-function findHighestSeatNumber(listOfNums2020) {
+function findHighestSeatNumber(input) {
+
+    input = input.split("\n")
+    var seatNumArray = []
+    for (line of input) {
+        var row = line.slice(0, 6)
+        var column = line.slice(7, 9)
+
+        var rowArray = row.split("")
+        var columnArray = column.split("")
+
+        var rowNum = findRow(rowArray)
+        var columnNum = findColumn(columnArray)
+
+        var seatNum = findSeatNum(rowNum, columnNum)
+        seatNumArray.push(seatNum)
+    
+    }
+    
+    return Math.max(...seatNumArray)
 
 }
 

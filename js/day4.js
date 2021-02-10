@@ -36,8 +36,6 @@ function findNumberOfValidPassports(passportBlob) {
 
     var passportArray = createArrayOfPassportObjects(passportBlob).filter(isValidPassport)
 
-    console.log(passportArray)
-
     return passportArray.length
 }
 
