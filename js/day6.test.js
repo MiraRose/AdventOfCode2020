@@ -1,28 +1,15 @@
 
+const { createArrayOfLines } = require('./day6');
 const day6 = require('./day6');
 
-// test('count yeses', () => {
+test('count yeses', () => {
 
-//     var string = "abc\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb"
-
-//     var stringArray = string.split("\n\n").forEach(line => line.split("\n")
-
-//     console.log(stringArray)
+    var string = "abc\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb"
+    var arrayOfGroupSets = createArrayOfLines(string)
+    result = day6.findHowManyYeses(arrayOfGroupSets)
+    expect(result).toBe(11)
     
-//     result = day6.countYeses(stringArray)
-//     expect(result).toBe(11)
-
-    
-// });
-
-// test('count yeses', () => {
-
-//     var string = "abc\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb"
-    
-//     result = day6.findHowManyYeses(string)
-//     expect(result).toBe(11)
-    
-// });
+});
 
 test('create line array', () => {
 

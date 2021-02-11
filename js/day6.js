@@ -3,8 +3,14 @@ function countYeses(arrayOfLines) {
 
 }
 
-function findHowManyYeses(listOfNums2020) {
+function findHowManyYeses(arrayOfGroupSets) {
+
+    var count = 0;
+    for (var set of arrayOfGroupSets) {
+       count = count + set.size
+    }
     
+    return count
 }
 
 function createArrayOfLines(listOfNums2020) {
