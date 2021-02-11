@@ -1,6 +1,8 @@
 
-function countYeses(arrayOfLines) {
+function countYeses(listOfNums2020) {
 
+    var arrayOfLines = createArrayOfLines(listOfNums2020)
+    return findHowManyYeses(arrayOfLines)
 }
 
 function findHowManyYeses(arrayOfGroupSets) {
@@ -33,8 +35,8 @@ function createArrayOfLines(listOfNums2020) {
 function formSubmit() {
     var input = document.getElementById('listOfNums2020').value;
 
-    var highestSeatNum = findHighestSeatNumber(input);
-    document.getElementById('result').innerText = highestSeatNum;
+    var numOfYeses = countYeses(input);
+    document.getElementById('result').innerText = numOfYeses;
 }
 
 module.exports = {  
